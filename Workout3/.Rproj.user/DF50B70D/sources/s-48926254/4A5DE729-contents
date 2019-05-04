@@ -1,0 +1,54 @@
+---
+output:
+  github_document:
+    html_preview: false
+---
+
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+## R Markdown
+## Overview
+
+`"binomial"` is a package 
+that simulates variations of binomial distributions.
+
+* `bin_variable()` creates an object (of class `"binvar"`)
+
+
+## Motivation
+
+This package implements functions for
+calculating probabilities of a Binomial random variable, and related calculations such as the
+probability distribution, the expected value, variance, etc.
+
+
+## Usage
+
+```{r}
+library(Workout3-Cameron-Mandley.R)
+#Creates an object of type binvar
+bin1 <- bin_variable(trials = 10, p = 0.3)
+#Creates a summary of the object
+binsum1 <- summary(bin1)
+#Utilizes a custom summary printing of the object
+binsum1
+```
+
+```{r}
+
+```
+
+
+
+```{r}
+
+```
+
+

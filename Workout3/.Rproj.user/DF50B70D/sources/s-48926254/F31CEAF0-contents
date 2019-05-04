@@ -1,0 +1,80 @@
+---
+title: "Lab11-Cameron-Mandley.Rmd"
+author: "Cameron Mandley"
+date: "4/19/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(stringr)
+library(dplyr)
+download.file(url = "https://raw.githubusercontent.com/ucb-stat133/stat133-labs/master/data/text-emotion.csv", destfile = 'text-emotion.csv')
+emotions = read.csv(file = "text-emotion.csv", sep = "," , stringsAsFactors = FALSE)
+head(emotions,10)
+content = emotions$content
+count = str_length(content)
+summary(count)
+hist(count, breaks = seq(from = 0, to = 170, by = 5))
+
+sum(count[count == 0])
+sum(count[count == 1])
+which(count == 1)
+emotions$content[which(count == 1)]
+
+sum(count[count == max(count)])
+which(count == max(count))
+content[which(count == max(count))]
+
+author = emotions$author
+
+author_length = str_length(author)
+sum(author_length>15)
+
+grep("\\W", author)
+author[10601]
+summary(author_length)
+author[author_length == 2]
+
+length(grep("\\^", content))
+length(grep("\\$\\$\\$", content))
+contain = str_detect(content, "a|A")
+sum(contain != TRUE)
+head(content[contain != TRUE], 10)
+summary(str_count(content, "!"))
+sentiment = as.factor(emotions$sentiment)
+levels(sentiment)
+levels = table(sentiment)
+levels
+levels = sort(levels, ncreasing = TRUE)
+barplot(levels, horiz = TRUE)
+emotions %>%
+  group_by(sentiment) %>%
+  summarise(average = mean(str_length(content)))
+
+contain = str_detect(content, "#")
+sum(contain == TRUE)
+head(content[contain == TRUE], 10)
+summary(str_count(content, "!"))
+sentiment = as.factor(emotions$sentiment)
+levels(sentiment)
+levels = table(sentiment)
+levels
+levels = sort(levels, ncreasing = TRUE)
+barplot(levels, horiz = TRUE)
+emotions %>%
+  group_by(sentiment) %>%
+  summarise(average = mean(str_length(content)))
+```
+
+
+
+```{r}
+
+```
+
+

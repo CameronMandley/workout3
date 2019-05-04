@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556922557948.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "243AAE04",
+    "lastKnownWriteTime" : 1556840423,
+    "last_content_update" : 1556840423,
+    "path" : "~/Desktop/Workout3/R/Workout3-Cameron-Mandley.R",
+    "project_path" : "R/Workout3-Cameron-Mandley.R",
+    "properties" : {
+        "cursorPosition" : "98,0",
+        "scrollLine" : "89",
+        "source_window_id" : ""
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,93 @@
+---
+title: "Lab10-Cameron-Mandley.Rmd"
+author: "Cameron Mandley"
+date: "4/11/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(ggplot2)
+
+bag1 <- c('white', 'white', 'red')
+bag2 <- c(rep('white', 3), 'red')
+bags <- c('bag1', 'bag2')
+repetitions <- 1000
+drawn_balls <- character(repetitions)
+
+set.seed(345)
+for (i in 1:repetitions) {
+  # select one bag
+  chosen_bag <- sample(bags, 1)
+  
+  # draw a ball from chosen bag
+  if (chosen_bag == 'bag1') {
+    drawn_balls[i] <- sample(bag1, 1)
+  } else {
+    drawn_balls[i] <- sample(bag2, 1)
+  }
+}
+
+table(drawn_balls) / repetitions
+
+drawn_balls <- matrix(nrow = repetitions, ncol = 4)
+box1 = c("blue", "blue", "red")
+box2 = c("blue", "blue", "red", "red", "red", "white")
+for (i in 1:repetitions) {
+  if(runif(1)>.5) {
+    drawn_balls[i,] <- sample(box1, size = 4, replace = TRUE)
+  }
+  else {
+    drawn_balls[i,] <- sample(box2, size = 4, replace = FALSE)
+  }
+}
+count = 1:1000
+for (i in 1:repetitions) {
+  count[i] = table(drawn_balls[i, ])["blue"]
+}
+count[is.na(count)] = 0
+zero = 1:100
+one = 1:100
+two = 1:100
+three = 1:100
+four = 1:100
+for (i in 1:1000) {
+  zero[i] = table(count[1:i])[1]/i
+  one[i] = table(count[1:i])[2]/i
+  two[i] = table(count[1:i])[3]/i
+  three[i] = table(count[1:i])[4]/i
+  four[i] = table(count[1:i])[5]/i
+}
+reps = c(1:1000)
+data = data.frame(zero, one, two, three, four, reps)
+data[is.na(data)] = 0
+ggplot(data = data, aes(x = reps)) +
+         geom_line(aes(y = zero, col = '0')) +
+         geom_line(aes(y = one, col = '1')) +
+         geom_line(aes(y = two, col = '2')) +
+         geom_line(aes(y = three, col = '3')) +
+         geom_line(aes(y = four, col = '4')) +
+         labs(title="Relative Frequencies of Numbers of Balls",
+              x ="reps", y = "freqs", fill = "number")
+library(reshape2)
+library(plotly)
+
+sp <- ggplot(tips, aes(x=total_bill, y=tip/total_bill)) + geom_point(shape=1)
+
+# Divide by levels of "sex", in the vertical direction
+sp + facet_grid(sex ~ .)
+
+ggplotly()
+```
+
+
+
+```{r}
+
+```
+
+

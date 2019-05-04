@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556922523722.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4076577055",
+    "id" : "830576F",
+    "lastKnownWriteTime" : 1556920143,
+    "last_content_update" : 1556920143,
+    "path" : "~/Desktop/Workout3/tests/testthat/summarytests.R",
+    "project_path" : "tests/testthat/summarytests.R",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

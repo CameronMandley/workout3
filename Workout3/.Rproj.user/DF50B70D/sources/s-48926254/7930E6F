@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556923970391.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4286978108",
+    "id" : "7930E6F",
+    "lastKnownWriteTime" : 1556924479,
+    "last_content_update" : 1556924479980,
+    "path" : "~/Desktop/Workout3/vignettes/introduction.Rmd",
+    "project_path" : "vignettes/introduction.Rmd",
+    "properties" : {
+        "cursorPosition" : "13,35",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

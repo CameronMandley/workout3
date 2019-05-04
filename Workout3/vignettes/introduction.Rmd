@@ -1,0 +1,49 @@
+---
+title: "Introduction.Rmd"
+author: "Cameron Mandley"
+date: "5/3/2019"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to binomial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(collapse = T, comment = "#>")
+library(Workout3-Cameron-Mandley.R)
+```
+
+## Binomial
+
+`"binomial"` is a package 
+that simulates variations of binomial distributions.
+
+
+
+## Creating a `binomial variable`
+
+Create a `"Binomial Variable"` object with the function `bin_variable()`:
+
+```{r}
+#Creates an object of type binvar
+bin1 <- bin_variable(trials = 10, p = 0.3)
+```
+You can change the arguments `trials` and `p`
+
+## Printing a Summary of your binomial variable
+
+Once you have created your binomial variable, you can create a summary of it and print it out
+```{r}
+#Creates a summary of the object
+binsum1 <- summary(bin1)
+```
+
+## Plot of relative frequencies
+
+You can use the function `plot()` to create a graohic of your binomial distribution object:
+```{r}
+plot.bindist(binsum1)
+plot.bincum(binsum1)
+```
+

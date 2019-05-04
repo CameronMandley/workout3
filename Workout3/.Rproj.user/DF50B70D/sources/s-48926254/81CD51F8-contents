@@ -1,0 +1,29 @@
+getwd
+source("Workout3-Cameron-Mandley.R")
+
+# context with one test that groups expectations
+context("Checkers") 
+
+test_that("Checkers works as expected", {
+  expect_equal(check_prob(x), TRUE)
+  expect_equal(check_trials(x), TRUE)
+  expect_equal(check_success(x), TRUE)
+})
+
+context("Summary measures") 
+
+test_that("Summary measures are as expected", {
+  expect_equal(aux_variance(), TRUE)
+  expect_equal(aux_mode(), TRUE)
+  expect_equal(aux_skewness(), TRUE)
+  expect_equal(aux_kurtosis(), TRUE)
+})
+
+context("Binomial") 
+
+test_that("Binomial values are as expected", {
+  expect_equal(bin_choose(), TRUE)
+  expect_equal(bin_probability(), TRUE)
+  expect_equal(bin_distribution(), TRUE)
+  expect_equal(bin_cumulative(), TRUE)
+})

@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556922517243.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1949938071",
+    "id" : "7132C33C",
+    "lastKnownWriteTime" : 1556920428,
+    "last_content_update" : 1556920428,
+    "path" : "~/Desktop/Workout3/tests/testthat/checkertests.R",
+    "project_path" : "tests/testthat/checkertests.R",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

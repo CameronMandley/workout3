@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556922886190.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "DDCD9B8F",
+    "lastKnownWriteTime" : 1556922294,
+    "last_content_update" : 1556922294,
+    "path" : "~/Desktop/Workout3/tests/testthat.R",
+    "project_path" : "tests/testthat.R",
+    "properties" : {
+        "cursorPosition" : "1,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
